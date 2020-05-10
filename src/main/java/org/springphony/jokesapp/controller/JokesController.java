@@ -1,6 +1,5 @@
 package org.springphony.jokesapp.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,9 +8,9 @@ import org.springphony.jokesapp.service.JokeService;
 @Controller
 public class JokesController {
 
-    private JokeService jokeService;
+    private final JokeService jokeService;
 
-    @Autowired // no need to add autowired as spring framework implicitly does this
+//    @Autowired // no need to add autowired as spring framework implicitly does this
     public JokesController(JokeService jokeService) {
         this.jokeService = jokeService;
     }
